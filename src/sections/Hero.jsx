@@ -1,6 +1,7 @@
 import Button from '../components/Button';
 import {arrowRight} from '../assets/icons';
-import {statistics} from '../constants';
+import {shoes, statistics} from '../constants';
+import {bigShoe1} from '../assets/images';
 const Hero = () => {
 	return (
 		<section
@@ -11,7 +12,7 @@ const Hero = () => {
 					Our Summer Collection
 				</p>
 				<h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82] font-bold">
-					<span className="xl:bg-white xl:whitespace-nowrap relative z-1- pr-10">
+					<span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">
 						The New Arrival
 					</span>
 					<br />
@@ -30,6 +31,22 @@ const Hero = () => {
 							<p className="leading-7 font-montserrat text-slate-gray">
 								{stat.label}
 							</p>
+						</div>
+					))}
+				</div>
+			</div>
+			<div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-hero bg-cover bg-center ">
+				<img
+					src={bigShoe1}
+					alt="show collection"
+					width={610}
+					height={500}
+					className="relative object-contain z-10"
+				/>
+				<div>
+					{shoes.map((shoe, index) => (
+						<div key={index}>
+							<ShoeCard shoe={shoe} />
 						</div>
 					))}
 				</div>
