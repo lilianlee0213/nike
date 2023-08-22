@@ -1,7 +1,7 @@
 const Button = ({label, iconUrl, borderColor, backgroundColor, textColor}) => {
 	return (
 		<button
-			className={`flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none rounded-full ${
+			className={`flex justify-between items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none rounded-full ${
 				backgroundColor
 					? `${backgroundColor} ${borderColor} ${textColor}`
 					: ' bg-coral-red  text-white border-coloral-red'
